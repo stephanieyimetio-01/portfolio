@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Benedict Portfolio</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
+awesome/6.7.2/css/all.min.css"/> 
+</head> 
+<body > 
+    <section class="Home"> 
+     <nav> 
+        <div class="nav-container"> 
+        <div class="hr"> 
+        <div class="logo"> 
+            <span id="logo">STEPHANIE</span><span></span> 
+        </div> 
+        </div> 
+    <ul> 
+      <div class="dropdown"> 
+        <li><a href="contact.html"><i class="fa-solid fa
+phone"></i>Contact</a></li> 
+        <li><a href="competence.html"><i class="fa-solid fa
+brain"></i>Competence</a></li> 
+        <li><a href="projet.html"><i class="fa-solid fa
+folder"></i>Projets</a></li> 
+        <li><a href="about.html"><i class="fa-solid fa
+user"></i>About</a></li> 
+        <li><a href="index.html"><i class="fa-solid fa-home"></i>Home</a></li> 
+      </div> 
+    </div> 
+    <div class="p"> 
+    <h1 class="h1">Bonjour,moi c'est <br> <span id="nom">STEPHANIE YIMETIO
+    
+</span><br> je suis<span class="typewriter" 
+id="typewriter"></span></h1></h1> 
+    </div> 
+    </ul> 
+     </nav> 
+     <section> 
+        <div class="main-container"> 
+            <div class="image"> 
+             
+            </div> 
+            <div class="container"> 
+            </div> 
+            <div class="typewriter"><span class="typewriter
+text"></span><label for=""></label></div> 
+ 
+        </div> 
+     </section> 
+      
+      <img src="photo store.jpg" alt="Photo de profil" class="w-48 
+h-48 rounded-full shadow-lg object-cover"> 
+ 
+         <script> 
+ 
+        const words = ["Etudiante en Génie Logiciel 2","Analiste des données","Développeuse d'application","cybersecurite","Gestionnaire de stock des entreprises commerciales, Analyste,entrepreneure"]; 
+        let index = 0; 
+        const typewriterElement = document.getElementById("typewriter"); 
+ 
+        function type(word, i) { 
+            if (i < word.length) { 
+                typewriterElement.textContent += word.charAt(i); 
+                setTimeout(() => type(word, i + 1), 100); // Vitesse d'affichage 
+            } else { 
+                setTimeout(() => erase(word, i), 2000); // Temps d'affichage du mot 
+            } 
+        } 
+ 
+        function erase(word, i) { 
+            if (i > 0) { 
+                typewriterElement.textContent = word.slice(0, i - 1); 
+                setTimeout(() => erase(word, i - 1), 100); // Vitesse d'effacement 
+            } else { 
+                index = (index + 1) % words.length; // Passer au mot suivant 
+                setTimeout(() => type(words[index], 0), 500); // Temps avant d'afficher le mot suivant 
+            } 
+        } 
+ 
+        type(words[index], 0); // Démarrer l'effet 
+    </script> 
+</section> 
+<section class="about"> 
+ 
+  <header> 
+    <h1>À propos de moi</h1> 
+  </header> 
+ 
+  <div class="container"> 
+ 
+    <div class="about-text"> 
+      <h2>STEPHANIE YIMETIO</h2> 
+      <p> 
+        je suis étudiante en deuxième année genie logiciel,avec une experience dans le développement d'application et la gestion des projets informatiques.
+        passionnée par l'innovation numérique et l'entrepenariat,j'aime concevoir des solutions adaptées aux besoin réels,notamment
+        dans les domaines de gestion commerciale et des services.
+        curieuse,autonome et orienté résultat,je m'engage dans une  demarche d'amelioration continue et j'apprend chaque jour afin de renforcer mes competences
+        techniques,linguistique et professionnelles dans un contexte international.
+
+      </p> 
+      <div class="highlights"> 
+        <div class="highlight"><i class="fas fa-graduation
+cap"></i><span>Niveau 2 - IUGET</span></div> 
+        <div class="highlight"><i class="fas fa-code"></i><span>Développement web et mobile 
+</span></div> 
+        <div class="highlight"><i class="fas fa-lightbulb"></i><span>entrepeneure
+</span></div> 
+        <div class="highlight"><i class="fas fa-laptop-code"></i><span>Projets 
+personnels</span></div> 
+      </div> 
+    </div> 
+  </div> 
+</section> 
+ 
+ 
+<section class="competence"> 
+ 
+  <header> 
+    <h1>Mes Compétences</h1> 
+    <p>Étudiante en Génie Logiciel  | Niveau 2</p> 
+  </header> 
+ 
+  <div class="container"> 
+    <div class="skills-grid"> 
+      <div class="skill-card"> 
+        <i class="fab fa-html5"></i> 
+        <div class="skill-title">HTML/CSS</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 90%;"></div> 
+        </div> 
+      </div> 
+ 
+      <div class="skill-card"> 
+        <i class="fab fa-js"></i> 
+        <div class="skill-title">JavaScript</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 75%;"></div> 
+        </div> 
+      </div> 
+ 
+      <div class="skill-card"> 
+        <i class="fab fa-python"></i> 
+        <div class="skill-title">Python</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 10%;"></div> 
+        </div> 
+      </div> 
+ 
+      <div class="skill-card"> 
+        <i class="fab fa-git-alt"></i> 
+        <div class="skill-title">PHP</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 90%;"></div> 
+        </div> 
+      </div> 
+ 
+      <div class="skill-card"> 
+        <i class="fas fa-people-group"></i> 
+        <div class="skill-title">IDE</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 85%;"></div> 
+        </div> 
+      </div> 
+ 
+      <div class="skill-card"> 
+        <i class="fas fa-people-group"></i> 
+        <div class="skill-title">Entrepreneure</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 85%;"></div> 
+        </div> 
+      </div> 
+ 
+      <div class="skill-card"> 
+        <i class="fas fa-brain"></i> 
+        <div class="skill-title">GIT/GITHUB</div> 
+        <div class="progress-bar"> 
+          <div class="progress" style="--progress-width: 80%;"></div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</section> 
+ 
+<section class="projet"> 
+        <header> 
+    <h1>Mes Projets</h1> 
+    <p>Voici quelques projets réalisés au cour de mon apprrntissage en Génie 
+Logiciel</p> 
+  </header> 
+ 
+  <section class="projects"> 
+    <div class="project-card"> 
+      <h2>Site web e-commerce vente en gros et en details des perruques </h2> 
+      <p>Une application de gestion des stocks d'une entreprise commerciale avec
+HTML, CSS, et JavaScript.</p> 
+      <a href="#" target="_blank">Voir le projet</a> 
+    </div> 
+        <div class="project-card"> 
+      <h2>Site web vente des Ebook </h2> 
+      <p>Ce site permet la vente des livres en ligne </p> 
+      <a href="#" target="_blank">Voir le projet</a> 
+    </div> 
+            <div class="project-card"> 
+      <h2>Site web sur la prestation de service,coiffure,MakeUp,vente d'accessoires pour beauté</h2> 
+      <p>Ce site permet de bosster ma visibilité ainsi que l'audience en ligne de nos services de coiffure et de MakeUp</p> 
+      <a href="#" target="_blank">Voir le projet</a> 
+    </div> 
+ 
+    <div class="project-card"> 
+      <h2>Portfolio Personnel</h2> 
+      <p>Mon propre site web de présentation, avec effets dynamiques et design 
+responsive.</p> 
+      <a href="index.html" target="_blank">Voir le projet</a> 
+    </div> 
+  </section> 
+</section> 
+ 
+ 
+ 
+<section class="contact"> 
+  <header> 
+    <h1>Contactez-moi</h1> 
+  </header> 
+ 
+  <main> 
+    <form action="#" method="POST" novalidate> 
+      <div class="form-group"> 
+        <input type="text" id="name" name="name" placeholder=" " required /> 
+        <label for="name">Nom complet</label> 
+      </div> 
+ 
+      <div class="form-group"> 
+        <input type="email" id="email" name="email" placeholder=" " required 
+/> 
+        <label for="email">Adresse email</label> 
+      </div> 
+ 
+      <div class="form-group"> 
+        <textarea id="message" name="message" placeholder=" " 
+required></textarea> 
+        <label for="message">Votre message</label> 
+      </div> 
+ 
+      <button type="submit" class="submit-btn">Envoyer</button> 
+    </form> 
+ 
+    <div class="social-links" aria-label="Réseaux sociaux"> 
+      <a href="https://www.linkedin.com/in/#" target="_blank" 
+rel="noopener" title="LinkedIn"> 
+        <i class="fab fa-linkedin"></i> 
+      </a> 
+      <a href="https://github.com/"#"target="_blank" 
+rel="noopener" title="GitHub"> 
+        <i class="fab fa-github"></i> 
+      </a> 
+      <a href="mailto:stephanieyimetio@gmail.com" title="Email"> 
+        <i class="fas fa-envelope"></i> 
+      </a> 
+    </div> 
+  </main> 
+ 
+  <footer> 
+    &copy; 2026-Portfolio STEPHANIE | Génie Logiciel 
+  </footer> 
+</section> 
+</body> 
+</html
